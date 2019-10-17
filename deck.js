@@ -13,3 +13,14 @@ function getDeck() {
     }
     return deck;
 }
+
+function shuffle() {
+    for (var i = 0; i < 1000; i++) {
+        var position1 = Math.floor((Math.random() * deck.length));
+        var position2 = Math.floor((Math.random() * deck.length));
+        var someVar = deck[position1];
+
+        deck[position1] = deck[position2];
+        deck[position2] = someVar;
+    }
+}
